@@ -7,7 +7,7 @@ services:
       - "8080:8080"
     container_name: malak
     environment:
-      instance_name: "malak"
+      INSTANCE: 1
 
 
   # Second instance of the app (last name)
@@ -17,7 +17,7 @@ services:
       - "8081:8080"
     container_name: badawy
     environment:
-      instance_name: "badawy"
+      INSTANCE: 2
 
   # MongoDB Database
   mongo:
@@ -46,7 +46,7 @@ services:
 
   # Nginx Load Balancer
   nginx:
-    image: nginx:latest
+    image: nginx
     ports:
       - "4040:80"
     volumes:

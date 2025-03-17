@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 //Replace it with your name_ID (e.g random_52_0000)
 @RequestMapping("/malak_52_4040")
 public class MainController {
-    @Value("FirstName")
+    @Value("${FirstName}")
     String firstName;
-    @Value("LastName")
+    @Value("${LastName}")
     String lastName;
-    @Value("ID")
+    @Value("${ID}")
     String ID;
-    @Value("Instance")
+    @Value("${Instance}")
     String Instance;
 
     DatabaseSeeder databaseSeeder;
